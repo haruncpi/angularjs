@@ -1,0 +1,33 @@
+<div class="col-md-12">
+	<script type="text/javascript" ng:autobind
+        src="http://code.angularjs.org/0.9.16/angular-0.9.16.js"></script>
+
+<table class="table table-bordered table-striped table-condensed">
+    <tr>
+        <th>ITEM ID</th>
+        <th>ITEM NAME</th>
+        <th>PRICE</th>
+        <th>QUANTITY</th>
+        <th>AMOUNT</th>
+        <th></th>
+    </tr>
+    <tr>
+        <td>
+      		<autocomplete attr-placeholder="Enter item id" attr-input-id="id" attr-input-class="form-control input-sm" ng-model="Item.id" data="itemList" autocomplete-required on-select="getItemDetails"></autocomplete>
+        </td>
+        <td><input class="form-control input-sm" readonly ng-model="Item.name"></td>
+        <td><input class="form-control input-sm" name="sell_price" ng-model="Item.sell_price"></td>
+        <td><input type="number" class="form-control input-sm" name="quantity" ng-model="Item.quantity" ng-init="Item.quantity=1"></td>
+        <td><input type="number" class="form-control input-sm"  readonly value="{{(Item.sell_price*Item.quantity)}}"></td>
+        <td><button class="btn btn-sm btn-warning" ng-click="addItem(Item)">Add New</button></td>
+    </tr>
+    <tr ng-repeat="item in Items">
+        <td>{{item.id}}</td>
+        <td>{{item.name}}</td>
+        <td>{{item.sell_price}}</td>
+        <td>{{item.quantity}}</td>
+        <td>{{(item.sell_price*item.quantity)}}</td>
+        <td><button class="btn btn-sm btn-danger" ng-click="removeItem($index)">Remove</button></td>
+    </tr>
+</table>
+</div>

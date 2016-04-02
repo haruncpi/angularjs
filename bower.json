@@ -1,0 +1,25 @@
+{
+  "name": "angular test",
+  "authors": [
+    "Md.Harun-Ur-Rashid <harun.cox@gmail.com>"
+  ],
+  "description": "this is test",
+  "main": "",
+  "moduleType": [],
+  "keywords": [
+    "angular",
+    "test"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-chart.js": "~0.9.0"
+  }
+}

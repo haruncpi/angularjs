@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<title>Angular</title>
+	<script src="js/jquery-2.1.4.js"></script>
+	<!-- stylesheets -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="css/style.css">
+	<!-- end stylesheets -->
+	<!-- js libray -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
+    <!--angular css-->
+    <link rel="stylesheet" href="bower_components/angular-loading-bar/src/loading-bar.css">
+    <link rel="stylesheet" href="css/autocomplete.css">
+	
+	<!-- angular core -->
+	<script src="js/angular.min.js"></script>
+	<script src="bower_components/angular-route/angular-route.min.js"></script>
+	<script src="bower_components/angular-resource/angular-resource.min.js"></script>
+	<script src="bower_components/angular-loading-bar/src/loading-bar.js"></script>
+	<script src="bower_components/angular-io-barcode/build/angular-io-barcode.min.js"></script>
+	
+	<script type="text/javascript" src="bower_components/qrcode/lib/qrcode.min.js"></script>
+	<script type="text/javascript" src="bower_components/angular-qr/angular-qr.min.js"></script>
+	
+	<!-- chart -->
+	<script src="bower_components/angular-chart.js/dist/angular-chart.js"></script>
+	<link rel="stylesheet" href="bower_components/angular-chart.js/dist/angular-chart.css">
+	<!-- chart -->
+	<script src="js/autocomplete.js"></script>
+	<!-- angular core -->
+	
+</head>
+<body>
+
+<section id="header">
+	<nav class="navbar navbar-default" role="navigation">
+	<!-- Brand and toggle get grouped for better mobile display -->
+	<div class="navbar-header">
+		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+			<span class="sr-only">Toggle navigation</span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		</button>
+		<a class="navbar-brand" href="#">Angular JS</a>
+	</div>
+
+	<!-- Collect the nav links, forms, and other content for toggling -->
+	<div class="collapse navbar-collapse navbar-ex1-collapse">
+		
+		<ul class="nav navbar-nav navbar-right">
+			<li><a href="#/">Posts</a></li>
+			<li><a href="#barcode">Barcode</a></li>
+			<li><a href="#qrcode">QR Code</a></li>
+			<li><a href="#chart">Chart</a></li>
+		</ul>
+	</div><!-- /.navbar-collapse -->
+</nav>
+</section>
+
+<!-- loader -->
+<div class="row">
+	<div class="col-md-6 col-md-offset-6" id="my-loader">
+		
+	</div>
+</div>
+<!-- # loader -->
+
+<div class="row">
+	<div class="container"> 
+			<div ng-view></div>
+	</div> 
+</div>
+
+
+<a href="#" id="backToTop"><i data-toggle="tooltip" data-placement="top" title="Go to top" class="fa  fa-chevron-circle-up fa-2x"></i></a>
+<!-- other scripts -->	
+
+
+<!-- end other scripts -->
+<script src="script/app.js"></script>
+<!--angular controllers-->
+<script src="script/models/post.js"></script>
+<script src="script/controllers/post-controller.js"></script>
+<script src="script/controllers/invoice-controller.js"></script>
+<script src="script/controllers/barcode-controller.js"></script>
+<script src="script/controllers/qrcode-controller.js"></script>
+<script src="script/controllers/chart-controller.js"></script>
+
+</body>
+</html>
