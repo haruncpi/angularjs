@@ -1,16 +1,49 @@
 #backToTop {
-  position: fixed;
-  bottom: 107px;
-  right: 6px;
-  font-size: 20px;
+    position: fixed;
+    bottom: 107px;
+    right: 6px;
+    font-size: 20px;
 }
+
 .centered {
-  margin: 0px auto;
-  float: none;
+    margin: 0px auto;
+    float: none;
 }
+
+li.todo{
+    transition: all ease 0.2s;
+    -moz-transition: all ease 0.2s;
+    -webkit-transition: all ease 0.2s;
+    -o-transition: all ease 0.2s;
+    overflow: hidden;
+    max-height: 0;
+    background: #333;
+    border-radius: 4px;
+    margin: 0 10px;
+    padding: 0 10px;
+    color:#f1f1f1;
+}
+
+li.todo .show {
+    max-height: 100px;
+    margin: 10px;
+    padding: 10px;
+}
+
+
 /* Mobile first queries */
+
+
 /* Larger than mobile */
+
+
 /* Larger than phablet */
+
+
 /* Larger than tablet */
+
+
 /* Larger than desktop */
+
+
 /* Larger than Desktop HD */

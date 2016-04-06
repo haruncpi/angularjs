@@ -1,0 +1,63 @@
+<div class="row">
+    <!-- cart single item -->
+    <div ng-class="checkCartItem(product.id)? 'col-md-3 added':'col-md-3'" ng-repeat="product in products">
+        <img alt="{{product.name}}" class="img img-thumbnail" height="140" ng-src="{{product.photo}}">
+            <h3 class="text-center">
+                {{product.name}}
+            </h3>
+            <h4 class="text-center">
+                {{product.price|currency:"Tk "}}
+            </h4>
+            <div class="btn-group">
+                <button class="btn-group-sm btn btn-danger" ng-click="discreaseCartItem(product.id)">
+                    -
+                </button>
+                <button class="btn-group-sm btn btn-success" ng-click="addToCart(product)">
+                    +
+                </button>
+                <button class="btn-group-sm btn btn-default" ng-show="checkCartItem(product.id)">
+                    {{getItemQty(product.id)}}
+                </button>
+            </div>
+        </img>
+    </div>
+    <!-- end cart single item -->
+    <div class="col-md-3">
+        <ul class="list-group">
+            <li animate="" class="list-group-item" ng-repeat="cartItem in cartItems">
+                <img alt="{{cartItem.name}}" class="pull-left" height="40" ng-src="{{cartItem.photo}}">
+                    {{cartItem.id}}
+                    <div class="btn-group pull-right">
+                        <button class="btn btn-xs btn-success" ng-click="increaseCartItem(cartItem.id)">
+                            +
+                        </button>
+                        <button class="btn btn-xs btn-warning" ng-click="discreaseCartItem(cartItem.id)">
+                            -
+                        </button>
+                        <button class="btn btn-xs btn-danger" remove="removeCartItem(cartItem.id)">
+                            X
+                        </button>
+                    </div>
+                    <br>
+                        {{cartItem.name}}
+                        <br>
+                            {{cartItem.quantity}}X{{cartItem.price}} = {{cartItem.quantity*cartItem.price}}
+                            <br>
+                            </br>
+                        </br>
+                    </br>
+                </img>
+            </li>
+            <li class="list-group-item">
+                <strong>
+                    Total :
+                    <span count-to="{{getCartTotal()}}" duration="0.5" value="0">
+                    </span>
+                </strong>
+            </li>
+            <li class="list-group-item">
+            	<a href="#/checkout" class="btn btn-success">Checkout</a>
+            </li>
+        </ul>
+    </div>
+</div>

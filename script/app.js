@@ -1,4 +1,17 @@
-var myApp = angular.module('myApp', ['ngRoute','angular-loading-bar','ngResource','autocomplete','io-barcode','ja.qr','chart.js']);
+var myApp = angular.module('myApp', 
+    [
+        'ngRoute',
+        'angular-loading-bar',
+        'ngResource',
+        'autocomplete',
+        'io-barcode',
+        'ja.qr',
+        'chart.js',
+        'ipCookie',
+        'countTo'
+        ]
+);
+
 myApp.config(function ($routeProvider) {
     $routeProvider
         .when('/', {
@@ -20,6 +33,18 @@ myApp.config(function ($routeProvider) {
         .when('/chart', {
             templateUrl: 'views/chart.html',
             controller: 'ChartController'
+        })
+        .when('/todo', {
+            templateUrl: 'views/todo.html',
+            controller: 'TodoController'
+        })
+        .when('/cart', {
+            templateUrl: 'views/cart.html',
+            controller: 'CartController'
+        })
+        .when('/checkout', {
+            templateUrl: 'views/checkout.html',
+            controller: 'CartController'
         })
     	.otherwise({
         	redirectTo: '/'

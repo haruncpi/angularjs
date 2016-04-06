@@ -1,0 +1,12 @@
+<div class="col-md-12">
+    <button class="btn btn-success" ng-click="add()">
+        Add
+    </button>
+    <div class="col-md-3">
+        <ul>
+            <li animate="" ng-repeat="name in names" remove="remove($index)">
+                {{name}} <span class="pull-right">X</span>
+            </li>
+        </ul>
+    </div>
+</div>
